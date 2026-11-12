@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Graph Traversal Visualizer</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="container">
+        <h1>Graph Traversal Visualizer</h1>
+        <p>Explore BFS, DFS, and shortest path concepts through interactive graph animations.</p>
+      </div>
+    </header>
+
+    <main class="container layout">
+      <section class="panel controls-panel">
+        <h2>Controls</h2>
+
+        <label for="algorithmSelect">Algorithm</label>
+        <select id="algorithmSelect">
+          <option value="bfs">Breadth-First Search (BFS)</option>
+          <option value="dfs">Depth-First Search (DFS)</option>
+          <option value="dijkstra">Shortest Path (Dijkstra)</option>
+        </select>
+
+        <label for="nodeCount">Node Count</label>
+        <input id="nodeCount" type="range" min="4" max="10" step="1" value="6" />
+
+        <label for="speedRange">Animation Speed</label>
+        <input id="speedRange" type="range" min="50" max="600" step="10" value="220" />
+
+        <div class="button-row">
+          <button id="generateGraphBtn">New Graph</button>
+          <button id="startBtn" class="primary">Start</button>
+        </div>
+      </section>
+
+      <section class="panel canvas-panel">
+        <div id="graphContainer" class="graph-container" aria-label="Graph area"></div>
+      </section>
+
+      <section class="panel info-panel">
+        <h2>Algorithm Info</h2>
+        <div id="algorithmDescription" class="description"></div>
+        <div id="complexity" class="complexity"></div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
